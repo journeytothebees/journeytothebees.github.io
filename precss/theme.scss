@@ -1,0 +1,1174 @@
+$brown: #7C3E00;
+$yellow: #FFDA00;
+$lightyellow: #FFF4B3;
+$white: #FFFFFF;
+$black: #000000;
+
+$tbrown: transparentize($brown, 0.2);
+$tyellow: transparentize($yellow, 0.2);
+$tlightyellow: transparentize($lightyellow, 0.2);
+$tblack: transparentize($black, 0.2);
+
+$slightdark: url('../img/slightdark.svg');
+$slightlight: url('../img/slightlight.svg');
+
+@mixin photobg($image) {
+  background: $brown url('../img/#{$image}') center center;
+  background-size: cover;
+}
+
+@mixin iconbg($image, $size, $x, $y) {
+  background-image: url('../img/#{$image}');
+  background-size: #{$size} #{$size};
+  background-repeat: no-repeat;
+  background-position: #{$x} #{$y};
+}
+
+
+
+body {
+  font-family: 'Helvetica Neue', 'PingFang HK', 'Microsoft JengHei', '微軟正黑體', sans-serif;
+  font-size: 23px;
+}
+
+a {
+  transition: 200ms opacity;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container > div {
+  min-height: 100vh;
+}
+
+.title {
+  flex-basis: 60px;
+  order: 2;
+}
+
+.main {
+  flex-basis: calc(100vw - 60px);
+  order: 1;
+}
+
+
+h1 {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+
+  font-size: 1.15em;
+  letter-spacing: 10px;
+  position: fixed;
+  top: 20px;
+  right: 16px;
+  color: $brown;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Hiragino Mincho Pro W6', 'Hiragino Mincho ProN' , 'Songti TC Bold', 'SimSun', '宋体';
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.9em;
+}
+
+h2 small {
+  font-size: .75em;
+  margin-right: 10px;
+}
+
+.box {
+  height: 600px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexv {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-hhalf {
+  flex-basis: 50%;
+  height: 100%;
+}
+
+.hhalf {
+  flex-basis: 50%;
+}
+
+.box-hsmall {
+  flex-basis: 20%;
+  height: 100%;
+}
+
+.box-hmedium {
+  flex-basis: 30%;
+  height: 100%;
+}
+
+.box-hthird {
+  flex-basis: 33.3%;
+  height: 100%;
+}
+
+.box-hsemi {
+  flex-basis: 40%;
+  height: 100%;
+}
+
+.box-hlarge {
+  flex-basis: 60%;
+  height: 100%;
+}
+
+.box-hxlarge {
+  flex-basis: 70%;
+  height: 100%;
+}
+
+.box-vhalf {
+  flex-basis: 50%;
+  width: 100%;
+}
+
+.box-vxxlarge {
+  flex-basis: 80%;
+  width: 100%;
+}
+
+.box-vsmall {
+  flex-basis: 20%;
+  width: 100%;
+}
+
+.textin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textin > p, .textin > h3 {
+  width: 80%;
+  text-align: justify;
+}
+
+h3 {
+  line-height: 1.8em;
+  margin: 0;
+}
+
+.restraint {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.coverbox {
+  position: absolute;
+  //height: 200px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.back {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 100px;
+  font-size: 1.15em;
+}
+
+.back a {
+  text-decoration: none;
+}
+
+p, figcaption, li {
+  line-height: 1.8em;
+}
+
+.section-title {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.section-title h3 {
+  font-size: 2em;
+  letter-spacing: 10px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gallery figure {
+  flex-basis: 400px;
+}
+
+.gallery figure .imgcontainer {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery figure img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.sgallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  figure {
+    flex-basis: 250px;
+  }
+
+  figure .imgcontainer {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  figure img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
+
+.showbox {
+  //height: 120px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.ending {
+  padding: 30px 0 50px 0;
+  background: $lightyellow;
+}
+
+.share {
+  background: $white;
+  display: flex;
+  border-radius: 5px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.share h3 {
+  margin-right: 20px;
+}
+
+.otherstories {
+  @extend .flex;
+  height: 120px;
+}
+
+.otherstories > a {
+  @extend .box-hhalf;
+  @extend .textin;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.otherstories > a:first-child {
+  background: $brown;
+  color: $lightyellow;
+
+  small {
+    color: $yellow;
+  }
+}
+
+.otherstories > a:last-child {
+  background: $yellow;
+  color: $black;
+
+  small {
+    color: $brown;
+  }
+}
+
+.otherstories > a > div {
+  @extend .textin;
+}
+
+.otherstories h2 {
+  margin-top: 0;
+}
+
+.prevnext {
+  @extend h5;
+  padding-top: 0.7em;
+  line-height: 1em;
+  margin-right: 10px;
+}
+
+.sectionbar {
+  height: 90px;
+  background: $yellow;
+  overflow: hidden;
+  color: $black;
+
+  .back a {
+    color: $brown;
+  }
+}
+
+ul {
+  margin: 10px 0 0 0;
+}
+
+ul ul {
+  margin: 0;
+}
+
+.img300 + h3, .img250 + h3, .img200 + h3 {
+  margin-top: 20px;
+}
+
+.img300, .img250, .img200 {
+  display: flex;
+  justify-content: center;
+}
+
+.img300 img {
+  max-height: 300px;
+  height: auto;
+  max-width: 300px;
+  width: auto;
+}
+
+.img250 img {
+  max-height: 250px;
+  height: auto;
+  max-width: 250px;
+  width: auto;
+}
+
+.img200 img {
+  max-height: 200px;
+  height: auto;
+  max-width: 200px;
+  width: auto;
+}
+
+/* home */
+.homemain {
+  position: relative;
+}
+
+.honeycombs {
+  width: 940px;
+  //background: red;
+  height: 500px;
+  z-index: 9999;
+  padding-bottom: 50px;
+}
+
+.honeycombs-mobile {
+  display: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -61px;
+}
+
+.onecomb {
+  width: 180px;
+  overflow: hidden;
+  margin: 0 -5px;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.outer {
+  transform: rotate(-60deg) skewY(30deg);
+  overflow: hidden;
+  width: 180px;
+  height: 207.8461px;
+  box-shadow: -8px -9.2376px 0px #FFDA00 inset, 8px 9.2376px 0px #FFDA00 inset;
+  background: white;
+}
+
+.inner {
+  transform: skewY(-30deg) rotate(60deg);
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-shadow: -8px 0px 0px #FFDA00 inset, 8px 0px 0px #FFDA00 inset;
+  position: relative;
+
+}
+
+.inner a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transition: 250ms all ease;
+
+  h2 {
+    color: $black;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    right: 0px;
+    font-size: 30px;
+
+    small {
+      display: block;
+      color: $brown;
+      margin: 0 0 3px 0;
+      font-size: 16px;
+    }
+  }
+}
+
+.icon-game {
+  @include iconbg('icon-game.png', 160px, center, 48px);
+}
+
+.icon-process {
+  @include iconbg('icon-process.png', 160px, center, 65px);
+}
+
+.icon-bees {
+  @include iconbg('orientbee.png', 140px, center, 100px);
+}
+
+.icon-produces {
+  @include iconbg('icon-produces.png', 160px, 40px, 30px);
+}
+
+.icon-story1 {
+  @include iconbg('icon-story1.png', 120px, center, 100px);
+}
+
+.icon-story2 {
+  @include iconbg('icon-story2.png', 100px, center, 100px);
+}
+
+.icon-story3 {
+  @include iconbg('icon-story3.png', 120px, center, 100px);
+}
+
+.icon-story4 {
+  @include iconbg('icon-story4.png', 120px, 50px, 100px);
+}
+
+.icon-fb {
+  @include iconbg('fb.png', 50px, center, 110px);
+}
+
+.icon-making {
+  @include iconbg('icon-making.png', 100px, center, 90px);
+}
+
+.homemain {
+  background: #fff url('../img/honeycomb.svg');
+}
+
+.movingbees {
+  position: absolute;
+  //background: black;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.movingbee {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: url('../img/flyingbee.png');
+  background-size: contain;
+  background-position: center center;
+  transition-property: transform;
+  transition-timing-function: ease;
+  z-index: 0;
+  transform: rotateZ(0deg) translate3d(0px,0px,0px);
+  will-change: transform;
+}
+
+.logo {
+  position: absolute;
+  bottom: 10px;
+  background-color: rgba(255,255,255,.9);
+  border-radius: 3px;
+  height: (55px + 10px);
+  display: flex;
+  left: calc(50vw - 50px - 180px);
+
+  a {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+  }
+}
+
+.skhlmc, .polyu {
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.skhlmc {
+  background-image: url('../img/skhlmc.png');
+  background-size: 180px 55px;
+  width: (180px + 20px);
+  height: (55px + 10px);
+}
+
+.polyu {
+  background-image: url('../img/polyu.png');
+  background-size: 180px 55px;
+  width: (180px + 20px);
+  height: (55px + 10px);
+}
+
+/* fade in */
+.fadein {
+  animation: slidein 1s;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateY(20vh);
+  }
+
+  20% {
+    opacity: 0;
+    transform: translateY(20vh);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes backfadein {
+  0% {
+    opacity: 0;
+  }
+
+  67% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* story 1 */
+.story1 {
+
+  .coverbox {
+    background: $tyellow;
+
+    h2 {
+      color: $black;
+      small {
+        color: $brown;
+      }
+    }
+
+  }
+
+  .back a {
+    color: $brown;
+  }
+
+  .story1-top {
+    @include photobg('story1-top-1.JPG');
+  }
+
+  .story1-2 {
+    @include photobg('story1-2-1.jpg');
+  }
+
+  .story1-2-1 {
+    background: $lightyellow;
+  }
+
+  .story1-2-2 {
+    background: $slightdark;
+  }
+
+  .section-title {
+    background: $yellow;
+  }
+
+  .gallery {
+    color: $white;
+    background: $brown $slightlight;
+  }
+
+  .story1-5 {
+    @include photobg('story1-5-1.JPG');
+  }
+
+  .showbox {
+    background: $tlightyellow;
+  }
+
+  .story1-6 {
+    @include photobg('story1-6-1.jpg');
+  }
+
+  .story1-6-1 {
+    background: $yellow $slightdark;
+  }
+
+  .story1-6-1 h3 {
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+
+    font-size: 1.17em;
+    width: 2.34em;
+    height: 80%;
+    letter-spacing: 3px;
+  }
+
+  .story1-6-2 {
+    color: $brown;
+    background: $slightdark;
+  }
+
+
+}
+
+/* story 2 */
+.story2 {
+  .coverbox {
+    background: $tblack;
+
+    p {
+      color: $white;
+    }
+
+    h2 {
+      color: $white;
+      small {
+        color: $yellow;
+      }
+    }
+
+  }
+
+  .back a {
+    color: $yellow;
+  }
+
+  .story2-top {
+    @include photobg('story2-top-1.JPG');
+  }
+
+  .story2-2 {
+    @include photobg('story2-2-1.JPG');
+  }
+
+  .story2-2-1 {
+    background: $brown $slightlight;
+    color: $yellow;
+  }
+
+  .story2-3 {
+    background: $black;
+    color: $white;
+  }
+
+  .story2-6 {
+    @include photobg('story2-6-1.jpg');
+  }
+
+  .story2-6-1 {
+    background: $brown;
+    color: $yellow;
+  }
+
+  .story2-6-2 {
+    color: $brown;
+    background: $slightdark;
+  }
+
+  .story2-7 {
+    @include photobg('story2-7-1.JPG');
+  }
+
+  .story2-7-1 {
+    color: $yellow;
+    background: $brown $slightlight;
+  }
+
+  .showbox {
+    background: $tblack;
+    color: $white;
+  }
+}
+
+/* story 3 */
+.story3 {
+  .story3-top {
+    @include photobg('story3-top-1.JPG');
+  }
+
+  .coverbox {
+    background: $tbrown;
+    color: $white;
+
+    h2 {
+      color: $lightyellow;
+      small {
+        color: $yellow;
+      }
+    }
+  }
+
+  .back a {
+    color: $yellow;
+  }
+
+  .story3-2 {
+    @include photobg('story3-2-1.JPG');
+  }
+
+  .story3-2-1 {
+    background: $lightyellow $slightdark;
+    color: $brown;
+  }
+
+  .story3-3 {
+    @include photobg('story3-3-1.JPG');
+
+    .showbox {
+      background: $tbrown;
+      color: $yellow;
+    }
+  }
+
+  .section-title {
+    background: $black;
+    color: $lightyellow;
+  }
+
+  .story3-4 {
+    @include photobg('story3-4-1.JPG');
+  }
+
+  .story3-4-1 {
+    background: $brown;
+    color: $white;
+  }
+
+  .story3-4-2 {
+    color: $brown;
+  }
+
+  .story3-5 {
+    @include photobg('story3-5-1.JPG');
+  }
+
+  .story3-5-1 {
+    background: $yellow $slightdark;
+    color: $brown;
+  }
+
+  .story3-6 {
+    @include photobg('story3-6-1.JPG');
+  }
+
+  .story3-6-1 {
+    background: $yellow $slightlight;
+    color: $black;
+  }
+}
+
+/* story 4 */
+.story4 {
+  .story4-top {
+    @include photobg('story4-top-1.JPG');
+  }
+
+  .coverbox {
+    background: $tbrown;
+    color: $white;
+
+    h2 {
+      color: $yellow;
+      small {
+        color: $white;
+      }
+    }
+  }
+
+  .back a {
+    color: $lightyellow;
+  }
+
+  .story4-2 {
+    @include photobg('story4-2-1.JPG');
+  }
+
+  .story4-2-1 {
+    background: $lightyellow $slightdark;
+    color: $brown;
+  }
+
+  .story4-3 {
+    @include photobg('story4-3-1.JPG');
+  }
+
+  .story4-3-1 {
+    background: $brown $slightlight;
+    color: $white;
+  }
+
+  .story4-4 {
+    @include photobg('story4-4-1.JPG');
+
+    .showbox {
+      background: $tbrown;
+      color: $lightyellow;
+    }
+  }
+
+  .section-title {
+    background: $yellow;
+    color: $black;
+  }
+
+  .story4-5 {
+    @include photobg('story4-5-1.JPG');
+
+    .showbox {
+      background: $tblack;
+      color: $white;
+    }
+  }
+
+  .story4-6 {
+    @include photobg('story4-6-1.JPG');
+
+    .showbox {
+      background: $tbrown;
+      color: $yellow;
+    }
+  }
+
+
+}
+
+/* bees */
+.bees {
+
+  .bees-1 {
+    background: $lightyellow $slightdark;
+  }
+
+  .bees-2 {
+    @include photobg('queen-1.JPG');
+  }
+
+  .bees-2-1 {
+    background: $brown;
+    color: $white;
+
+    h3 {
+      color: $yellow;
+    }
+  }
+
+  .bees-3 {
+    @include photobg('worker-1.JPG');
+  }
+
+  .bees-3-1 {
+    background: $yellow;
+    color: $black;
+
+    h3 {
+      color: $brown;
+    }
+  }
+
+  .bees-5 {
+    background: $lightyellow $slightdark;
+    color: $brown;
+
+    h3 {
+      color: $black;
+    }
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .bees-4 {
+    @include photobg('beeflight-1.JPG');
+  }
+
+  .bees-4-1 {
+    background: $brown $slightlight;
+    color: $white;
+
+    h3 {
+      color: $yellow;
+    }
+  }
+
+}
+
+/* produces */
+.produces {
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .ending p {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .produces-1 {
+    @include photobg('produces-1-1.JPG');
+    color: $white;
+
+    .showbox {
+      background: $tbrown;
+      padding: 20px 0;
+      h3 {
+        color: $yellow;
+      }
+    }
+  }
+
+  .produces-3 {
+    background: $yellow $slightdark;
+    color: $brown;
+
+    h3 {
+      color: $black;
+    }
+  }
+
+  .produces-4 {
+    @include photobg('produces-4-1.JPG');
+  }
+
+  .produces-4-1 {
+    background: $black $slightlight;
+    color: $white;
+
+    h3 {
+      color: $lightyellow;
+    }
+  }
+
+  .produces-5 {
+    background: $yellow $slightdark;
+  }
+}
+
+/* process */
+.process {
+  h3 {
+    text-align: center;
+  }
+
+  .process-1 {
+    background: $lightyellow $slightdark;
+    color: $black;
+  }
+
+  .process-2 {
+    text-align: center;
+    background: $yellow $slightlight;
+    color: $brown;
+  }
+
+  .process-3 {
+    @include photobg('process-3-1.JPG');
+
+    .showbox {
+      background: $tblack;
+      color: $white;
+    }
+  }
+
+  .process-4 {
+    @include photobg('story1-3-1.JPG');
+  }
+
+  .process-4-1 {
+    background: $brown;
+    color: $lightyellow;
+
+    h3 {
+      color: $white;
+    }
+  }
+
+  .process-5 {
+    background: $lightyellow $slightdark;
+
+    h3 {
+      color: $brown;
+    }
+  }
+
+  .process-6 {
+    @include photobg('beeflight-1.JPG');
+
+    .showbox {
+      background: $tbrown;
+      color: $white;
+    }
+  }
+}
+
+/* making of */
+.makingof {
+  .sectionbar {
+    background: #666;
+
+    h2, .back a {
+      color: #fff;
+    }
+  }
+
+  .makingof-video {
+    background: #333;
+    color: #fff;
+  }
+
+  .makingof-content {
+    background: #333 $slightlight;
+    color: #fff;
+    padding: 50px 0;
+
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 0;
+      color: $yellow;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .main {
+    background: #aaa;
+  }
+
+  .section-title {
+    background: #222;
+    color: #fff;
+    margin-bottom: 0px;
+  }
+
+  .makingof-1 {
+    @include photobg('makingof2.JPG');
+  }
+
+  .makingof-2 {
+    @include photobg('makingof5.JPG');
+  }
+
+  .makingof-3 {
+    @include photobg('makingof7.JPG');
+  }
+
+  .makingof-4 {
+    @include photobg('makingof1.JPG');
+  }
+
+  .makingof-5 {
+    @include photobg('makingof3.JPG');
+  }
+
+  .makingof-6 {
+    @include photobg('makingof6.JPG');
+  }
+
+  .makingof-7 {
+    @include photobg('makingof8.JPG');
+  }
+
+  .makingof-8 {
+    @include photobg('makingof4.JPG');
+  }
+
+  .box {
+    margin-bottom: 0;
+  }
+
+  .logos {
+    background: #fff;
+  }
+}
+
+@import 'mobile';

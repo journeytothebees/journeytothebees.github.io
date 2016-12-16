@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1481555605,
+	"version": 1481725608,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -108,6 +108,8 @@
 		"images/mobiletips-sheet0.png",
 		"images/l2deco-sheet0.png",
 		"images/loadingtext-sheet0.png",
+		"images/logos-sheet0.png",
+		"images/btnback2-sheet0.png",
 		"media/wood.mp3",
 		"media/miss.mp3",
 		"media/hit.mp3",
